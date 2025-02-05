@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Beleza 💇‍♀️💅</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: url('molde\ russo\ 150.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #e91e63;
+            margin-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .servico {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .servico img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .servico h2 {
+            font-size: 16px;
+            color: #e91e63;
+            margin: 10px 0 5px;
+        }
+
+        .servico p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .botao-pdf {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 15px;
+            background: #e91e63;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            width: fit-content;
+            cursor: pointer;
+            border: none;
+        }
+
+        /* Ajuste para impressão */
+        @media print {
+            .botao-pdf {
+                display: none;
+            }
+            body {
+                background: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>💇‍♀️ Catálogo de Beleza 💅</h1>
+
+        <button class="botao-pdf" onclick="window.print()">📄 Salvar como PDF</button>
+
+        <div class="grid">
+            <div class="servico">
+                <img src="dec nail arte a mais 20.jpeg" alt="decorações nail arte a mais">
+                <h2>decorações nail arte a mais</h2>
+                <p>R$ 20,00</p>
+            </div>
+            <div class="servico">
+                <img src="pe em gel 60re.jpeg" alt="deco ">
+                <h2>pé em gel </h2>
+                <p>R$ 60,00</p>
+            </div>
+            <div class="servico">
+                <img src="esmaltação em gel 65.jpeg" alt="esmaltação em gel">
+                <h2>esmaltação em gel</h2>
+                <p>R$ 65,00</p>
+            </div>
+            <div class="servico">
+                <img src="blindagem 75.jpeg" alt="blindagem">
+                <h2>blindagem</h2>
+                <p>R$ 75,00</p>
+            </div>
+            <div class="servico">
+                <img src="pe em gel c decoração75.jpeg" alt="pé em gel decoração">
+                <h2>pé em gel decoração</h2>
+                <p>R$ 75,00</p>
+            </div>
+            <div class="servico">
+                <img src="banho de gel 100.jpeg" alt="banho de gel">
+                <h2>banho de gel</h2>
+                <p>R$ 100,00</p>
+            </div>
+            <div class="servico">
+                <img src="manu ate 21-25= 100.jpeg" alt="Manutenção até 21/25">
+                <h2>Manutenção até 21/25</h2>
+                <p>R$ 100,00</p>
+            </div>
+            <div class="servico">
+                <img src="manun-de-outra-prof-aparti-120re.jpeg" alt="manutenção de outra profissional,  apartir de ">
+                <h2>manutenção de outra profissional,  apartir de</h2>
+                <p>R$ 120,00</p>
+            </div>
+            <div class="servico">
+                <img src="spa dos pes c blindagem nas unhas 120.jpeg" alt="spa dos pés c blindagem nas unhas">
+                <h2>spa dos pés c blindagem nas unhas</h2>
+                <p>R$ 120,00</p>
+            </div>
+            <div class="servico">
+                <img src="solf gel 120.jpeg" alt="solf gel">
+                <h2>solf gel</h2>
+                <p>R$ 120,00</p>
+            </div>
+            <div class="servico">
+                <img src="molde F 1 140.jpeg" alt="molde F1">
+                <h2>molde F1</h2>
+                <p>R$ 140,00</p>
+            </div>
+            <div class="servico">
+                <img src="molde russo 150.jpeg" alt="molde russo">
+                <h2>molde russo</h2>
+                <p>R$ 150,00</p>
+            </div>
+            <div class="servico">
+                <img src="https://via.placeholder.com/150" alt="Sombrancelha Henna">
+                <h2>Sobrancelha com Henna</h2>
+                <p>R$ 40,00</p>
+            </div>
+            <div class="servico">
+                <img src="https://via.placeholder.com/150" alt="Massagem Relaxante">
+                <h2>Massagem Relaxante</h2>
+                <p>R$ 120,00</p>
+            </div>
+            <div class="servico">
+                <img src="https://via.placeholder.com/150" alt="Peeling Facial">
+                <h2>Peeling Facial</h2>
+                <p>R$ 150,00</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
