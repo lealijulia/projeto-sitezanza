@@ -1,34 +1,43 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("formAgendamento").addEventListener("submit", function (event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
+    // === MENU HAMBURGUER ===
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
 
-        // Captura os valores do formulário
-        let servico = document.getElementById("servico").value;
-        let data = document.getElementById("data").value;
-        let horario = document.getElementById("horario").value;
-        let mensagem = document.getElementById("mensagem").value; // Captura a mensagem
+    if (toggle && menu) {
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    }
 
-        // Verifica se todos os campos obrigatórios foram preenchidos
-        if (!servico || !data || !horario) {
-            alert("Por favor, preencha todos os campos obrigatórios.");
-            return;
-        }
+    // === FORMULÁRIO DE AGENDAMENTO ===
+    const form = document.getElementById("formAgendamento");
 
-        // Número do WhatsApp (substitua pelo seu)
-        let numeroWhatsApp = "5551981803996"; // Exemplo: "51981803996"
+    if (form) {
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
 
-        // Formata a mensagem
-        let mensagemWhatsApp = `Olá, quero agendar um serviço!\n\n📌 Serviço: ${servico}\n📅 Data: ${data}\n⏰ Horário: ${horario}\n`;
+            let servico = document.getElementById("servico").value;
+            let data = document.getElementById("data").value;
+            let horario = document.getElementById("horario").value;
+            let mensagem = document.getElementById("mensagem").value;
 
-        // Adiciona a mensagem extra se o cliente escreveu algo
-        if (mensagem.trim() !== "") {
-            mensagemWhatsApp += `📝 Observação: ${mensagem}\n`;
-        }
+            if (!servico || !data || !horario) {
+                alert("Por favor, preencha todos os campos obrigatórios.");
+                return;
+            }
 
-        mensagemWhatsApp += `\nAguardo a confirmação!`;
+            let numeroWhatsApp = "5551981803996";
 
-        // Codifica e redireciona para o WhatsApp
-        let url = `https://wa.me/${5551981803996}?text=${encodeURIComponent(mensagemWhatsApp)}`;
-        window.location.href = url;
-    });
+            let mensagemWhatsApp = `Olá, quero agendar um serviço!\n\n📌 Serviço: ${servico}\n📅 Data: ${data}\n⏰ Horário: ${horario}\n`;
+
+            if (mensagem.trim() !== "") {
+                mensagemWhatsApp += `📝 Observação: ${mensagem}\n`;
+            }
+
+            mensagemWhatsApp += `\nAguardo a confirmação!`;
+
+            let url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagemWhatsApp)}`;
+            window.location.href = url;
+        });
+    }
 });

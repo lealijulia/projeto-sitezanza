@@ -1,0 +1,136 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: url('imagens/IMG-20250327-WA0121.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    padding-top: 80px; 
+     /* Espaço para o header fixo */
+}
+
+/* Header */
+header {
+    background-color: #ff69b4;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Seção Agendamento */
+section#agendamento {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+section#agendamento h2 {
+    font-size: 22px;
+    color: #ff69b4;
+    margin-bottom: 10px;
+}
+
+section#agendamento a {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Formulário */
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+form select,
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    margin-top: 20px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #ff1493;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    background-color: #f1f1f1;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    section#agendamento {
+        margin: 20px 15px;
+    }
+}
